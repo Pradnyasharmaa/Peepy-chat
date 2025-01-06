@@ -1,0 +1,356 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input, select {
+  outline: none;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  width: 100%;
+}
+
+input[type="color"] {
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #fff;
+}
+
+/* Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #333;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h1 {
+  font-size: 24px;
+}
+
+.chat-footer {
+  background: #222;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Chat Area */
+.chat-area {
+  overflow-y: auto;
+  padding: 20px;
+  background: #222;
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Message Styling */
+.message {
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #333;
+  max-width: 70%;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.message-text {
+  font-size: 16px;
+}
+
+.message-3d {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.message.sent {
+  background: #4e8cff;
+  align-self: flex-end;
+}
+
+.message.received {
+  background: #444;
+  align-self: flex-start;
+}
+
+/* Draggable */
+.draggable {
+  position: absolute;
+}
+
+.react-draggable {
+  position: absolute;
+}
+
+.react-draggable .draggable-content {
+  cursor: grab;
+  position: absolute;
+}
+
+.react-draggable .react-draggable-handle {
+  cursor: grab;
+}
+
+/* Button Styling */
+button:hover, input[type="button"]:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+button {
+  background-color: #4e8cff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+
+button:disabled {
+  background-color: #777;
+}
+
+/* Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Sticker Picker */
+.sticker-picker {
+  position: absolute;
+  bottom: 80px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.sticker-picker button {
+  background: transparent;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.sticker-picker button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+/* Game Menu */
+.game-menu {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.game-menu h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.game-menu button {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.game-menu button:hover {
+  background-color: #444;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Chat Input and Send Button */
+.chat-footer .input-container {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+
+.chat-footer .input-container input {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 50px;
+  color: white;
+}
+
+.chat-footer .input-container button {
+  background-color: #4e8cff;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+}
+
+.chat-footer .input-container button:hover {
+  background-color: #337ab7;
+}
+
+/* Custom Colors for Chat Bubbles */
+.chat-bubble .sent {
+  background-color: #4e8cff;
+}
+
+.chat-bubble .received {
+  background-color: #333;
+}
+
+.chat-bubble {
+  padding: 15px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.chat-container {
+  background: #111;
+}
+
+.message {
+  max-width: 70%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #333;
+  color: #fff;
+}
+
+.message.sent {
+  align-self: flex-end;
+}
+
+.message.received {
+  align-self: flex-start;
+}
+
+/* Interactive Buttons */
+.icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon-button:hover {
+  transform: scale(1.2);
+}
+
+.icon-button svg {
+  color: white;
+}
+
+/* Custom Theme */
+body {
+  background: linear-gradient(135deg, #3b1e56, #1c2a4e);
+}
+
+header {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  background-color: #1c1c1c;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .chat-footer {
+    flex-direction: column;
+  }
+
+  .message {
+    max-width: 100%;
+  }
+
+  .sticker-picker {
+    bottom: 100px;
+    left: 10px;
+  }
+
+  .game-menu {
+    bottom: 100px;
+    right: 10px;
+  }
+}
