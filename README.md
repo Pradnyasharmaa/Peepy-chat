@@ -1,5 +1,6 @@
 # Getting Started with Create React App
-
+THERE IS AN ISSUE IN TEXT BOX I AM TRYING TO FIX IT AFTER 1 TYPING I LETTER IT STOPS AND GAIN HAEV TO CLICK THE TEXT BOX .
+AND FOR PAINTING USE 30 28 BRUSH SIZE AND AFTER COMPLETING THE DRAWING AND UNLCICKING THE BRUSH ADJUST THE SIZE TO MAKE IT APPEAR ON SCREEN
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
